@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="over-lay" id="load">searching now...</div>
+    <div class="hero-bg">
+      <section class="top">
+        <header>
+          <a href="#">Yummy.eats</a>
+        </header>
+        <h1><span>the healthy</span> Eating Experiance</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          magni? Veniam exercitationem atque quidem? Numquam suscipit optio ad
+          ea in sed quas fugit delectus atque, velit nulla molestias doloribus
+          mollitia.
+        </p>
+        <div class="form-container">
+          <form action="">
+            <div class="form-left">
+              <label for="city">Enter your city:</label>
+              <input type="text" name="city" id="city" />
+              <p>example "san Diego"</p>
+            </div>
+
+            <input type="button" id="btn" value="Find Food Now" />
+          </form>
+        </div>
+      </section>
+    </div>
+    <section class="bottom">
+      <div class="right-col">
+        <h2>Authontic.awsome</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi modi,
+          laudantium dolore repudiandae quod praesentium fugiat ab repellat.
+          Impedit repellendus eveniet nam quia perspiciatis nostrum ad quo amet
+          aliquid velit! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Aperiam quod cumque quibusdam eius voluptates ex, unde numquam
+          inventore error rem illum. Quidem eligendi quas at perspiciatis nobis,
+          adipisci minima iste?
+        </p>
+      </div>
+      <img src="./img/sushi.jpg" alt="sushi" />
+    </section>
+
+    <script>
+      let btn = document.querySelector("#btn");
+
+      let overlay = document.querySelector("#load");
+
+      btn.addEventListener("click", () => {
+        overlay.style.display = "grid";
+        overlay.classList.add("anime");
+        setTimeout(() => {
+          overlay.style.display = "none";
+          overlay.classList.remove("anime");
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>
